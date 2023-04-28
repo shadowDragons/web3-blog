@@ -50,12 +50,8 @@ const BlogList = (props) => {
           await getItemDetail(rs[0][i], rs[1][i], rs[2][i]);
         }
       }
-      
-  
+
       setList(newList);
-
-      window.dispatchEvent(new Event('resize'));
-
       rs = await blogContract.list(page + 1, 10);
       if (rs[0].length && rs[0][0]) {
         setHasNext(true);
