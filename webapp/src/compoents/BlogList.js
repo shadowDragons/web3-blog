@@ -45,9 +45,12 @@ const BlogList = (props) => {
           })
       };
 
-      for (let i = 0; i < rs[0].length; i++) {
-        await getItemDetail(rs[0][i], rs[1][i], rs[2][i]);
+      if (rs[0][0] > 0) {
+        for (let i = 0; i < rs[0].length; i++) {
+          await getItemDetail(rs[0][i], rs[1][i], rs[2][i]);
+        }
       }
+      
   
       setList(newList);
 

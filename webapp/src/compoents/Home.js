@@ -18,7 +18,7 @@ function Home() {
   useEffect(() => {
     async function initChain() {
       if (signer) {
-        const address = "0x9A676e781A523b5d0C0e43731313A708CB607508"
+        const address = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
         let contract = new ethers.Contract(address, blogjson.abi, signer);
 
         dispatch({

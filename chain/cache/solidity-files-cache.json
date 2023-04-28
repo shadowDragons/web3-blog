@@ -35,6 +35,41 @@
       "artifacts": [
         "Blog"
       ]
+    },
+    "C:\\Users\\Administrator\\Downloads\\web3project\\web3-blog2\\chain\\contracts\\Blog.sol": {
+      "lastModificationDate": 1682683686641,
+      "contentHash": "84f324e0a518db0475b25d32202b164e",
+      "sourceName": "contracts/Blog.sol",
+      "solcConfig": {
+        "version": "0.8.18",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Blog"
+      ]
     }
   }
 }
