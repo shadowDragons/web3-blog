@@ -1,8 +1,11 @@
 import { create } from 'ipfs-http-client';
 import { Buffer } from "buffer";
 
-const projectId = "2OrxIhsYCE3F4owcaCj0K0wbQaT";
-const projectSecret = "e6ec03053a9bdfddedc2fea86bde120c";
+require("dotenv").config({ path: ".env" });
+
+const projectId = process.env.IPFS_PROJECT_ID;
+const projectSecret = process.env.IPFS_PROJECT_SECRET;
+
 const projectIdAndSecret = `${projectId}:${projectSecret}`;
 const ipfs = create({
   host: "ipfs.infura.io",
