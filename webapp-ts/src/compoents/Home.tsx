@@ -19,7 +19,8 @@ const Home : React.FC = () => {
   useEffect(() => {
     async function initChain() {
       if (signer) {
-        const address = "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+        
+        const address:string = process.env.REACT_APP_CONTRACT_ADDRESS ?? '';
         let contract = new ethers.Contract(address, blogjson.abi, signer);
 
         dispatch({

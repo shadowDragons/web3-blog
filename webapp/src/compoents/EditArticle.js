@@ -63,6 +63,7 @@ const EditArticle = () => {
         if (newIpfsHash) {
             console.log(blogContract)
             const tx = await blogContract.add(newIpfsHash);
+            console.log(tx)
             const rc = await tx.wait();
             const event = rc.logs.find(event => event.eventName === 'Add');
             if (event) {

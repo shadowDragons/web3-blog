@@ -14,7 +14,6 @@ const BlogList = (props) => {
     const {blogContract} = useSelector(state => state.contractReducer);
     const {ipfs} = useSelector(state => state.ipfsReducer);
   
-    const dispatch = useDispatch ();
     const navigate = useNavigate();
 
     async function getList()
@@ -23,11 +22,12 @@ const BlogList = (props) => {
 
         let newList = [...list];
 
-        if (page == 1) {
+        if (page === 1) {
           newList = [];
         }
 
         let rs = await blogContract.list(page, 10);
+        console.log(rs)
 
         let getItemDetail = (id, ipsfHash, status) => {
           return new Promise((resolve, reject) => {
@@ -97,7 +97,7 @@ const BlogList = (props) => {
 
     function initList()
     {
-      if (page == 1) {
+      if (page === 1) {
         getList()
       } else {
         setPage(1)
